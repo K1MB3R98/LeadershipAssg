@@ -1,0 +1,58 @@
+// Base Styles
+html,
+body,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 auto;
+    padding: 0;
+}
+
+html {
+    background-color: $background;
+}
+
+.wrapper {
+    max-width: 1260px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: $tertiary;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        text-decoration: none;
+        color: $background;
+        color: $white;
+    }
+}
+
+button {
+    margin: 0 auto;
+    padding: 10px 20px;
+    line-height: 25px;
+    transition: 0.3s;
+    background-color: $primary;
+    border: 2px solid $secondary;
+    border-radius: 10px;
+    color: $white;
+    font-size: 1rem;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        background-color: $white;
+        border: 2px solid $tertiary;
+        color: $primary;
+    }
+}

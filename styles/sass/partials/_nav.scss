@@ -1,0 +1,21 @@
+// Nav Styles
+nav {
+    border: 2px solid green;
+    .navFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .subNavFlex {
+        display: flex;
+        p {
+            margin: 0 10px;
+        }
+        i {
+            color: $secondary;
+        }
+        a {
+            color: $secondary;
+        }
+    }
+}
