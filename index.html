@@ -12,47 +12,51 @@
     <title>Leadership</title>
 </head>
 <body>
-    <header class="wrapper">
-        <h1>Module: Leadership Styles and Motivators</h1>
+    <header class="wrapper" id="home">
         <nav>
             <ul class="navFlex">
                 <li class="subNavFlex">
                     <!-- TODO: ^ displays 'previous' topic -->
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <p><a href="">Previous module</a></p>
+                    <p><a href=""><i class="fa-solid fa-arrow-left"></i>Previous module</a></p>
                 </li> 
                 <li class="subNavFlex">
                     <!-- TODO: ^ won't let you skip ahead until >80% achieved in knowledge check quiz -> error, else display next topic -->
-                    <p><a href="">Next module</a></p>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <p><a href="">Next module<i class="fa-solid fa-arrow-right"></i></a></p>
                 </li> 
             </ul>
         </nav>
-
-        <h2>Introduction</h2>
-        <p>This module will introduce you to some basic fundamentals of leadership.</p>
+        <h1>Module: Leadership Styles and Motivators</h1>
+        <hr>
+        <div class="intro">
+            <h2>Introduction</h2>
+            <p>This module will introduce you to some basic fundamentals of leadership.</p>
+        </div>
+        <h3>Overview</h3>
         <ul>
-            <li>
-                <h4>Learning Objectives</h4>
-                <h6>By the end of this module, you should be able to:</h6>
-                <p>• Describe the three different leadership styles</p>
-            </li>
-            <li><h6>Leadership Styles</h6>
+            <li><h6>• <a href="#leaderStyles">Leadership Styles:</a></h6>
                 <ul>
                     <li><p>Autocratic</p></li>
                     <li><p>Democratic</p></li>
                     <li><p>Free-Rein</p></li>
                 </ul>
             </li>
-            <li><h6>Choosing a Leadership Style</h6></li>
-            <li><h6>Reflection</h6></li>
-            <li><h6>Module Quiz</h6></li>
+            <li><h6>• <a href="#consolidation"> Consolidation Activity</a></h6>
+            </li>
+            <li><h6>• <a href="#yourStyle">Choosing a Leadership Style</a></h6></li>
+            <li><h6>• <a href="#reflection">Reflection</a></h6></li>
+            <li><h6>• <a href="#quiz">Module Quiz</a></h6></li>
         </ul>
+        <div class="objectives">
+            <h3>Learning Objectives</h3>
+            <h6>By the end of this module, you should be able to:</h6>
+            <p>• Describe the three different leadership styles</p>
+        </div>
+
     </header>
 
     <main>
         <!-- Begin: Leadership Styles -->
-        <section class="leaderStyles wrapper">
+        <section class="leaderStyles wrapper" id="leaderStyles">
             <article class="leaderStylesIntro">
                 <h2>Leadership Styles</h2>
                 <p>Leadership styles refers to the broad approach adopted by a leader. All leaders (at least all those leaders who already have followers) have one. If you are already a leader, that includes you. You just might not know what it is yet. But your followers do!</p>
@@ -94,43 +98,272 @@
             <article class="free-rein leaderType">
                 <h4>Free-Rein</h4>
                 <p>Free-rein leadership, also called Laissez-Faire, is a type of leadership style in which leaders are hands-off and allow group members to make the decisions. Mangers set objectives and employees are free to do whatever is appropriate to accomplish those objectives.</p>
-            </article>           
+            </article>   
+            <p><a href="#home">Back to Top<i class="fa-solid fa-arrow-turn-up"></i></a></p>
         </section>
         <!-- End: Leadership Styles -->
 
         <!-- Begin: Consolidation -->
-        <section class="consolidation wrapper">
+        <section class="consolidation wrapper" id="consolidation">
             <h2>Consolidation: Making It Stick</h2>
-            <p>Fill in the table below to summarize your learning and demonstrate your understanding of concepts studied in this module.</p>
-            <table>
-                
-            </table>
+            <p>Fill in the table below to summarize your  understanding of concepts studied in this module.</p>
+            <form action="">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Autocratic</th>
+                        <th>Democratic</th>
+                        <th>Free-Rein</th>
+                    </tr>
+                    <tr>
+                        <th>Positives of use of this leadership style:</th>
+                        <td>
+                            <textarea name="posAutocratic" id="posAutocratic"  placeholder="Type here"></textarea>
+                            <label for="Positives for Autocratic style" class="sr-only"></label>
+                        </td>
+                        <td>
+                            <textarea name="posDemodratic" id="posDemocratic" placeholder="Type here"></textarea>
+                            <label for="Positives for Democratic style" class="sr-only"></label>
+                        </td>
+                        <td>
+                            <textarea name="posFree-Rein" id="posFree-Rein" placeholder="Type here"></textarea>
+                            <label for="Positives for Free-Rein style" class="sr-only"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Negatives of use of this leadership style:</th>
+                        <td>
+                            <textarea name="negAutocratic" id="negAutocratic" placeholder="Type here"></textarea>
+                            <label for="Negatives for Autocratic style" class="sr-only"></label>
+                        </td>
+                        <td>
+                            <textarea name="negDemocratic" id="negDemocratic" placeholder="Type here"></textarea>
+                            <label for="Negatives for Democratic style" class="sr-only"></label>
+                        </td>
+                        <td>
+                            <textarea name="negFree-Rein" id="negFree-Rein" placeholder="Type here"></textarea>
+                            <label for="Negatives for Free-Rein style" class="sr-only"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Historical or pop-culture examples of this style:</th>
+                        <td>
+                            <textarea name="exAutocratic" id="exAutocratic" placeholder="Type here"></textarea>
+                            <label for="Examples for Autocratic style" class="sr-only"></label>
+                        </td>
+                        <td>
+                            <textarea name="exDemocratic" id="exDemocratic" placeholder="Type here"></textarea>
+                            <label for="Examples for Democratic style" class="sr-only"></label>
+                        </td>
+                        <td>
+                            <textarea name="exFree-Rein" id="exFree-Rein" placeholder="Type here"></textarea>
+                            <label for="Examples for Free-Rein style" class="sr-only"></label>
+                        </td>
+                    </tr>
+                </table>
+                <button>submit</button>
+            </form>
+            <p><a href="#home">Back to Top<i class="fa-solid fa-arrow-turn-up"></i></a></p>
         </section>
         <!-- End: Consolidation -->
 
         <!-- Begin: Your Style -->
-        <section class="yourStyle wrapper">
-
+        <section class="yourStyle wrapper" id="yourStyle">
+            <h2>Your Leadership Style</h2>
+            <h6>Be Selective in Your Leadership Style</h6>
+            <p>Managing employees are not a 'one size fits all' approach. You will need to use all three leadership styles here on a daily basis. Consider which is your natural leadership style, and which you feel you need to work on.</p>
         </section>
         <!-- End: Your Style -->
 
         <!-- Begin: Reflection -->
-        <section class="reflection wrapper">
-
+        <section class="reflection wrapper" id="reflection">
+            <h2>Reflection</h2>
+            <p>Complete these reflection questions and press "Submit" when you're done.</p>
+            <form action="">
+                <ol>
+                    <li>
+                        <label for="Reflection 1">
+                            What do you consider to be your natural leadership style, and why?
+                        </label>
+                        <br>
+                        <textarea name="refl1" id="refl1"></textarea>
+                    </li>
+                    <li>
+                        <label for="Reflection 2">
+                            Do you predominantly use that leadership style, or are there situations where you switch and make use of another style?
+                        </label>
+                        <br>
+                        <textarea name="refl2" id="refl2"></textarea>
+                    </li>
+                    <li>
+                        <label for="Reflection 3">
+                            What are the benefits and drawbacks that you have observed with this approach?
+                        </label>
+                        <br>
+                        <textarea name="refl3" id="refl3"></textarea>
+                    </li>
+                </ol>
+                <button>submit</button>
+            </form>
+            <p><a href="#home">Back to Top<i class="fa-solid fa-arrow-turn-up"></i></a></p>
         </section>
         <!-- End: Reflection -->
 
         <!-- Begin: Quiz -->
-        <section class="quiz wrapper">
-
+        <section class="quiz wrapper" id="quiz">
+            <h2>Module Quiz</h2>
+            <form action="">
+                <!-- TODO: add fieldsets and legends to mark out each question instead of <ol> -->
+                <ol>
+                    <!-- Question 1: -->
+                    <li>
+                        <h4>1. What is "Leadership"?</h4>
+                        <h6>Choose one: </h6>
+                        <ul>
+                            <li>
+                                <input type="radio" id="q1-1" name="q1" value="q1">
+                                <label for="q1-1">The art of influencing behaviour so as to achieve a goal.</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q1-2" name="q1" value="q1">
+                                <label for="q1-2">Anyone responsible for influencing human behaviour and for the achievement of a goal by a group.</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q1-3" name="q1" value="q1">
+                                <label for="q1-3">A sea-faring vessel full of leaders.</label>
+                            </li>
+                        </ul>
+                        <div>
+                            <h5>Feedback on answer choice goes here.</h5>
+                        </div>
+                    </li>
+                    <!-- Question 2: -->
+                    <li>
+                        <h4>A person's leadership style is often based on: </h4>
+                        <h6>Choose all that apply:</h6>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="q3-1" value="1">
+                                <label for="q3-1">Beliefs</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q3-2" value="2">
+                                <label for="q3-2">The current situation</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q3-3" value="3">
+                                <label for="q3-3">Phase of the moon</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q2-4" value="4">
+                                <label for="q2-4">Personality</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q2-4" value="5">
+                                <label for="q2-4">All of the above.</label>
+                            </li>                        
+                            <div>
+                                <h5>Feedback on answer choice goes here.</h5>
+                            </div>
+                        </ul>
+                    </li>
+                    <!-- Question 3: -->
+                    <li>
+                        <h4>Which leadership style is best described by the following statement: "My way, or the highway!"</h4>
+                        <h6>Select one:</h6>
+                        <ul>
+                            <li>
+                                <input type="radio" id="q3-1" name="q3" value="q3">
+                                <label for="q3-1">Free-Rein</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q3-2" name="q3" value="q3">
+                                <label for="q3-2">Democratic</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q3-3" name="q3" value="q3">
+                                <label for="q3-3">Autocratic</label>
+                            </li>
+                        </ul>
+                        <div>
+                            <h5>Feedback on answer choice goes here.</h5>
+                        </div>
+                    </li>
+                    <!-- Question 4: -->
+                    <li>
+                        <h4>A leader who says, "Do what you think is best", might best be described as using which style of leadership?</h4>
+                        <h6>Select one:</h6>
+                        <ul>
+                            <li>
+                                <input type="radio" id="q4-1" name="q4" value="q4">
+                                <label for="q4-1">Autocratic</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q4-2" name="q4" value="q4">
+                                <label for="q3-2">Free-Rein</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q4-3" name="q4" value="q4">
+                                <label for="q3-3">Democratic</label>
+                            </li>
+                        </ul>
+                        <div>
+                            <h5>Feedback on answer choice goes here.</h5>
+                        </div>
+                    </li>
+                    <!-- Question 5: -->
+                    <li>
+                        <h4>Which of the following are examples of leaders?</h4>
+                        <h6>Choose all that apply:</h6>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="q2-1" value="1">
+                                <label for="q2-1">Military Officers</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q2-2" value="2">
+                                <label for="q2-2">Jedi Knights</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q2-3" value="3">
+                                <label for="q2-3">Civil Servants</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q2-4" value="4">
+                                <label for="q2-4">Padawans</label>
+                            </li>
+                            <div>
+                                <h5>Feedback on answer choice goes here.</h5>
+                            </div>
+                        </ul>
+                    </li>
+                </ol>
+                <button>submit & check your answers</button>                
+            </form>
+            <p><a href="#home">Back to Top<i class="fa-solid fa-arrow-turn-up"></i></a></p>
         </section>
         <!-- End: Quiz -->
-
     </main>
 
     <footer>
-        <!-- Module Nav (previous topic/ next topic) -->
-        <p>Built by <a href="https://www.kimberleycodes.com/">Kimberley Schubert</a> for <a href="https://www.d2l.com/">D2L</a></p>
+        <nav class="footerNav">
+            <ul class="navFlex">
+                <li class="subNavFlex">
+                    <!-- TODO: ^ displays 'previous' topic -->
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <p><a href="">Previous module</a></p>
+                </li>
+                <li class="subNavFlex">
+                    <!-- TODO: ^ won't let you skip ahead until >80% achieved in knowledge check quiz -> error, else display next topic -->
+                    <p><a href="">Next module</a></p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </li>
+            </ul>
+
+        </nav>
+        <div class="footerInfo">
+            <p>Built by <a href="https://www.kimberleycodes.com/">Kimberley Schubert</a> for <a href="https://www.d2l.com/">D2L</a></p>
+        </div>
     </footer>
 </body>
 </html>

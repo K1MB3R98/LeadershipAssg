@@ -249,11 +249,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 h5 {
@@ -262,10 +262,12 @@ h5 {
 }
 
 h6,
-p {
+p,
+label {
   font-family: "Poppins", sans-serif;
   color: #3D3D56;
   font-size: 1rem;
+  line-height: 1.5;
 }
 
 html,
@@ -292,18 +294,21 @@ html {
   margin: 0 auto;
 }
 
-li {
+ul > li {
   list-style-type: none;
 }
 
 a {
-  color: #A38D7F;
+  color: #3D3D56;
 }
 a:hover, a:focus {
   cursor: pointer;
   text-decoration: none;
-  color: #e1daca;
-  color: white;
+  color: #A38D7F;
+}
+
+i {
+  padding: 0 10px;
 }
 
 button {
@@ -325,9 +330,11 @@ button:hover, button:focus {
   color: #648282;
 }
 
-nav {
-  border: 2px solid green;
+form {
+  border: 2px solid #A38D7F;
+  background: whitesmoke;
 }
+
 nav .navFlex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,6 +342,7 @@ nav .navFlex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 25px;
 }
 nav .subNavFlex {
   display: -webkit-box;
@@ -343,31 +351,58 @@ nav .subNavFlex {
 }
 nav .subNavFlex p {
   margin: 0 10px;
-}
-nav .subNavFlex i {
-  color: #3D3D56;
+  padding: 0;
 }
 nav .subNavFlex a {
   color: #3D3D56;
 }
+nav .subNavFlex a:hover, nav .subNavFlex a:focus {
+  cursor: pointer;
+  color: #e1daca;
+  color: #A38D7F;
+}
 
-header {
-  border: 2px solid blue;
+header h1 {
+  margin: 75px 0 50px 0;
+  text-align: center;
+}
+header h3 {
+  margin: 40px 0 10px;
+}
+header h6 {
+  padding-left: 25px;
+}
+header p {
+  padding-left: 50px;
+}
+header hr {
+  width: 40%;
+  color: #A38D7F;
+}
+header .intro h2 {
+  margin-top: 75px;
+}
+header .intro p {
+  margin: 20px 0 50px 0;
+  padding-left: 25px;
+}
+header .objectives {
+  padding-left: 10px;
 }
 
 main {
-  border: 2px solid red;
+  margin: 150px 0;
 }
 main section {
-  border: 2px solid green;
+  margin: 50px;
 }
 
-footer {
+footer .footerInfo {
   background-color: #3D3D56;
   height: 3rem;
   text-align: center;
 }
-footer p {
+footer .footerInfo p {
   padding-top: 1rem;
   color: #A38D7F;
 }

@@ -23,19 +23,22 @@ html {
     margin: 0 auto;
 }
 
-li {
+ul > li {
     list-style-type: none;
 }
 
 a {
-    color: $tertiary;
+    color: $secondary;
     &:hover,
     &:focus {
         cursor: pointer;
         text-decoration: none;
-        color: $background;
-        color: $white;
+        color: $tertiary;
     }
+}
+
+i {
+    padding: 0 10px;
 }
 
 button {
@@ -55,4 +58,9 @@ button {
         border: 2px solid $tertiary;
         color: $primary;
     }
+}
+
+form {
+    border: 2px solid $tertiary;
+    background: whitesmoke;
 }
