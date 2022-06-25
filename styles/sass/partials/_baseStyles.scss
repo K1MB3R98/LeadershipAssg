@@ -41,6 +41,11 @@ i {
     padding: 0 10px;
 }
 
+.buttons {
+    margin: 25px;
+    text-align: center;
+}
+
 button {
     margin: 0 auto;
     padding: 10px 20px;
@@ -62,5 +67,11 @@ button {
 
 form {
     border: 2px solid $tertiary;
+    border-radius: 5px;
     background: whitesmoke;
+}
+
+.toTop {
+    margin: 50px 0;
+    text-align: center;
 }

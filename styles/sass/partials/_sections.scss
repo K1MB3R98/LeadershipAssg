@@ -1,9 +1,109 @@
 // Section Styles
-main {
-    // border: 2px solid red;
-    margin: 150px 0;
-    section { 
+section { 
+    // border: 2px solid green;
+    padding-bottom: 50px;
+    h2 {
+        margin-bottom: 25px;
+        padding: 15px 0 15px 25px;
+    }
+    h6 {
+        margin: 30px 0 5px 0;
+    }
+}
+
+// Section Styles: "Leadership Styles"
+.leaderStyles {
+    h3,
+    h4 {
+        margin: 50px 0 15px 0;
+    }
+    p {
+        text-indent: 25px;   
+    }
+    .leaderStylesImg {
+        background-image: url(../assets/mtn.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+        height: 350px;
+        border-top: 2px solid $tertiary;
+        border-bottom: 2px solid $tertiary;
+        h2 {
+            margin-top: 250px;
+        }
+    }
+
+    .leaderStylesIntro {
+        margin-top: 30px;
+
+        p {
+            margin-top: 10px;
+        }
+    }
+}
+
+// Section Styles: Consolidation
+.consolidation {
+    p {
+        margin-bottom: 40px;
+        text-indent: 25px;
+    }
+    form {
+        padding: 50px 25px 25px 25px;
+    }
+}
+
+// Section Styles: Your Style
+.yourStyle {
+    p {
+        text-indent: 25px;
+    }
+    .yourStyleImg {
+        background-image: url(../assets/yourStyle.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+        height: 350px;
+        border-top: 2px solid $tertiary;
+        border-bottom: 2px solid $tertiary;  
+        h2 {
+            margin-top: 250px;
+        }
+    }
+}
+
+// Section Styles: Reflection
+.reflection {
+    margin-top: 50px;
+    p {
+        text-indent: 25px;
+    }
+    form {
+        padding: 25px;
+    }
+}
+
+// Section Styles: Quiz
+.quiz {
+    // border: 2px solid yellow;
+    .quizImg {
+        background-image: url(../assets/quizImg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+        height: 350px;
+        border-top: 2px solid $tertiary;
+        border-bottom: 2px solid $tertiary;
+        h2 {
+            margin-top: 250px;
+        }
+    }
+    .quizInstr p { 
         // border: 2px solid green;
-        margin: 50px;
+        margin-top: 25px;
+        text-indent: 25px;
     }
 }

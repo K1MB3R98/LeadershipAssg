@@ -7,6 +7,7 @@ h1 {
     font-family: $headingsFont;
     font-size: 2.5rem;
     color: $primary;
+    text-shadow: 1px 1px 0px $secondary;
 }
 
 h2,
@@ -14,18 +15,24 @@ h3,
 h4 {
     font-family: $headingsFont;
     color: $primary;
+    text-shadow: 1px 1px 0px $secondary;
 }
 
 h2 {
     font-size: 2rem;
+    text-shadow: 1px 1px 0px $secondary;
+    background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.74), transparent);
+    border-radius: 3px;
 }
 
 h3 {
     font-size: 1.5rem;
+    text-shadow: 1px 1px 0px $secondary;
 }
 
 h4 {
     font-size: 1.3rem;
+    text-shadow: 1px 1px 0px $secondary;
 }
 
 h5 {
@@ -35,7 +42,10 @@ h5 {
 
 h6,
 p, 
-label {
+label,
+ol,
+table, 
+textarea {
     font-family: $bodyFont;
     color: $secondary;
     font-size: 1rem;

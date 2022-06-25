@@ -1,0 +1,72 @@
+// Forms Styles
+form {
+    // border: 2px solid red;
+    margin-top: 50px;
+}
+
+textarea {
+    resize: none;
+}
+
+// Consolidation Form
+.consForm {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        th, 
+        tr, 
+        td {
+            border: 2px solid $background;
+        }
+        tbody {
+            th {
+                padding: 5px;
+                width: 175px;
+            }
+            td {
+                background-color: $white;
+            }
+        }
+    }
+    textarea {
+        border: none;
+        width: 100%;
+    }
+}
+
+// Reflection Form
+.reflectForm {
+    padding: 0 25px 25px 25px;
+    li {
+        // border: 2px solid red;
+        margin-top: 40px;
+    }
+    textarea {
+        margin-top: 25px;
+        max-width: 95%;
+        width: 95%;
+        height: 225px;
+    }
+}
+
+// Quiz Form
+.quizForm {
+    // border: 2px solid red;
+    margin-top: 50px;
+    padding: 50px 25px 25px 25px;
+
+    h6,
+    li {
+        padding: 0 25px;
+    }
+
+    .answer {
+        // border: 2px solid pink;
+        margin: 15px 25px 75px 25px;
+    }
+
+    .buttons {
+        // border: 2px solid blue;
+        margin-top: 75px;
+    }
+}

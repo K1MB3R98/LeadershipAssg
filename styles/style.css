@@ -235,6 +235,7 @@ h1 {
   font-family: "Marcellus", serif;
   font-size: 2.5rem;
   color: #648282;
+  text-shadow: 1px 1px 0px #3D3D56;
 }
 
 h2,
@@ -242,18 +243,25 @@ h3,
 h4 {
   font-family: "Marcellus", serif;
   color: #648282;
+  text-shadow: 1px 1px 0px #3D3D56;
 }
 
 h2 {
   font-size: 2rem;
+  text-shadow: 1px 1px 0px #3D3D56;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.81)), color-stop(rgba(255, 255, 255, 0.74)), to(transparent));
+  background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.74), transparent);
+  border-radius: 3px;
 }
 
 h3 {
   font-size: 1.5rem;
+  text-shadow: 1px 1px 0px #3D3D56;
 }
 
 h4 {
   font-size: 1.3rem;
+  text-shadow: 1px 1px 0px #3D3D56;
 }
 
 h5 {
@@ -263,7 +271,10 @@ h5 {
 
 h6,
 p,
-label {
+label,
+ol,
+table,
+textarea {
   font-family: "Poppins", sans-serif;
   color: #3D3D56;
   font-size: 1rem;
@@ -311,6 +322,11 @@ i {
   padding: 0 10px;
 }
 
+.buttons {
+  margin: 25px;
+  text-align: center;
+}
+
 button {
   margin: 0 auto;
   padding: 10px 20px;
@@ -332,7 +348,13 @@ button:hover, button:focus {
 
 form {
   border: 2px solid #A38D7F;
+  border-radius: 5px;
   background: whitesmoke;
+}
+
+.toTop {
+  margin: 50px 0;
+  text-align: center;
 }
 
 nav .navFlex {
@@ -342,7 +364,6 @@ nav .navFlex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 25px;
 }
 nav .subNavFlex {
   display: -webkit-box;
@@ -375,34 +396,192 @@ header h6 {
 header p {
   padding-left: 50px;
 }
-header hr {
-  width: 40%;
-  color: #A38D7F;
+header .title {
+  background-image: url(../assets/headerImg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 2px solid #A38D7F;
 }
 header .intro h2 {
-  margin-top: 75px;
+  margin-top: 50px;
+  padding: 15px 0 15px 25px;
 }
 header .intro p {
   margin: 20px 0 50px 0;
   padding-left: 25px;
 }
 header .objectives {
+  margin-bottom: 75px;
   padding-left: 10px;
 }
 
-main {
-  margin: 150px 0;
+section {
+  padding-bottom: 50px;
 }
-main section {
-  margin: 50px;
+section h2 {
+  margin-bottom: 25px;
+  padding: 15px 0 15px 25px;
+}
+section h6 {
+  margin: 30px 0 5px 0;
 }
 
+.leaderStyles h3,
+.leaderStyles h4 {
+  margin: 50px 0 15px 0;
+}
+.leaderStyles p {
+  text-indent: 25px;
+}
+.leaderStyles .leaderStylesImg {
+  background-image: url(../assets/mtn.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 350px;
+  border-top: 2px solid #A38D7F;
+  border-bottom: 2px solid #A38D7F;
+}
+.leaderStyles .leaderStylesImg h2 {
+  margin-top: 250px;
+}
+.leaderStyles .leaderStylesIntro {
+  margin-top: 30px;
+}
+.leaderStyles .leaderStylesIntro p {
+  margin-top: 10px;
+}
+
+.consolidation p {
+  margin-bottom: 40px;
+  text-indent: 25px;
+}
+.consolidation form {
+  padding: 50px 25px 25px 25px;
+}
+
+.yourStyle p {
+  text-indent: 25px;
+}
+.yourStyle .yourStyleImg {
+  background-image: url(../assets/yourStyle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 350px;
+  border-top: 2px solid #A38D7F;
+  border-bottom: 2px solid #A38D7F;
+}
+.yourStyle .yourStyleImg h2 {
+  margin-top: 250px;
+}
+
+.reflection {
+  margin-top: 50px;
+}
+.reflection p {
+  text-indent: 25px;
+}
+.reflection form {
+  padding: 25px;
+}
+
+.quiz .quizImg {
+  background-image: url(../assets/quizImg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 350px;
+  border-top: 2px solid #A38D7F;
+  border-bottom: 2px solid #A38D7F;
+}
+.quiz .quizImg h2 {
+  margin-top: 250px;
+}
+.quiz .quizInstr p {
+  margin-top: 25px;
+  text-indent: 25px;
+}
+
+form {
+  margin-top: 50px;
+}
+
+textarea {
+  resize: none;
+}
+
+.consForm table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.consForm table th,
+.consForm table tr,
+.consForm table td {
+  border: 2px solid #e1daca;
+}
+.consForm table tbody th {
+  padding: 5px;
+  width: 175px;
+}
+.consForm table tbody td {
+  background-color: white;
+}
+.consForm textarea {
+  border: none;
+  width: 100%;
+}
+
+.reflectForm {
+  padding: 0 25px 25px 25px;
+}
+.reflectForm li {
+  margin-top: 40px;
+}
+.reflectForm textarea {
+  margin-top: 25px;
+  max-width: 95%;
+  width: 95%;
+  height: 225px;
+}
+
+.quizForm {
+  margin-top: 50px;
+  padding: 50px 25px 25px 25px;
+}
+.quizForm h6,
+.quizForm li {
+  padding: 0 25px;
+}
+.quizForm .answer {
+  margin: 15px 25px 75px 25px;
+}
+.quizForm .buttons {
+  margin-top: 75px;
+}
+
+footer .footerNav {
+  color: #3D3D56;
+  margin-bottom: 5px;
+}
+footer .footerNav i {
+  padding-top: 6px;
+}
 footer .footerInfo {
   background-color: #3D3D56;
-  height: 3rem;
+  height: 3.5rem;
   text-align: center;
 }
 footer .footerInfo p {
   padding-top: 1rem;
   color: #A38D7F;
+}
+footer .footerInfo a {
+  color: white;
 }

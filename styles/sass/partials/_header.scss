@@ -1,13 +1,13 @@
 // Header Styles
 header {
     // border: 2px solid blue;
+    // border-top: 2px solid $tertiary;
     h1 {
         margin: 75px 0 50px 0;
         text-align: center;
     }
     h3 {
         margin: 40px 0 10px;
-        // padding-left: 25px;
     }
     h6 {
         padding-left: 25px;
@@ -15,13 +15,19 @@ header {
     p {
         padding-left: 50px;
     }
-    hr {
-        width: 40%;
-        color: $tertiary;
+    .title {
+        background-image: url(../assets/headerImg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 2px solid $tertiary;
     }
     .intro {
         h2 {
-            margin-top: 75px;
+            margin-top: 50px;
+            padding: 15px 0 15px 25px;
         }
         p {
             margin: 20px 0 50px 0;
@@ -29,6 +35,7 @@ header {
         }
     }
     .objectives {
+        margin-bottom: 75px;
         padding-left: 10px;
     }
 }
