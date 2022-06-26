@@ -88,6 +88,10 @@ section {
 // Section Styles: Quiz
 .quiz {
     // border: 2px solid yellow;
+        font-family: $bodyFont;
+        color: $secondary;
+        font-size: 1rem;
+        line-height: 1.5;
     .quizImg {
         background-image: url(../assets/quizImg.jpg);
         background-repeat: no-repeat;
@@ -98,12 +102,35 @@ section {
         border-top: 2px solid $tertiary;
         border-bottom: 2px solid $tertiary;
         h2 {
-            margin-top: 250px;
+            margin-top: 235px;
         }
     }
-    .quizInstr p { 
-        // border: 2px solid green;
-        margin-top: 25px;
-        text-indent: 25px;
+    .questions {
+        border: 2px solid yellow;
+    }
+    .answerOptions {
+        border: 2px solid green;
+        // individual options v
+        label {
+            border: 2px solid purple;
+        }
+    }
+    .responses {
+        border: 3px dotted blue;
+    }
+    .results {
+        // border: 2px solid blue;
+        margin: 50px 0;
+        height: 6rem;
+        div {
+            padding: 15px 0;
+            text-align: center;
+            color: $primary;
+            background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.74), transparent);
+            border-radius: 3px;
+        }
+        h5 {
+            text-shadow: 1px 1px 0px $secondary;
+        } 
     }
 }

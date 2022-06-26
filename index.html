@@ -241,138 +241,29 @@
             <div class="quizImg">
                 <h2 class="wrapper">Module Quiz</h2>
             </div>
-            <div class="quizInstr wrapper">
-                <p>Press "Submit" to record your results and check your answers.</p>
-            </div>
-            <form class="quizForm wrapper" action="">
-                <ul>
-                    <!-- Question 1: -->
-                    <li>
-                        <h4>1. What is "Leadership"?</h4>
-                        <h6>Choose one: </h6>
-                        <ul>
-                            <li>
-                                <input type="radio" id="q1-1" name="q1" value="q1">
-                                <label for="q1-1">The art of influencing behaviour so as to achieve a goal.</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="q1-2" name="q1" value="q1">
-                                <label for="q1-2">Anyone responsible for influencing human behaviour and for the achievement of a goal by a group.</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="q1-3" name="q1" value="q1">
-                                <label for="q1-3">A sea-faring vessel full of leaders.</label>
-                            </li>
-                        </ul>
-                        <div class="answer">
-                                <!-- Feedback on answer choice goes here. -->
-                        </div>
-                    </li>
-                    <!-- Question 2: -->
-                    <li>
-                        <h4>2. A person's leadership style is often based on: </h4>
-                        <h6>Choose all that apply:</h6>
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="q3-1" value="1">
-                                <label for="q3-1">Beliefs</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="q3-2" value="2">
-                                <label for="q3-2">The current situation</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="q3-3" value="3">
-                                <label for="q3-3">Phase of the moon</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="q2-4" value="4">
-                                <label for="q2-4">Personality</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="q2-4" value="5">
-                                <label for="q2-4">All of the above.</label>
-                            </li>                        
-                            <div class="answer">
-                                <!-- Feedback on answer choice goes here. -->
-                            </div>
-                        </ul>
-                    </li>
-                    <!-- Question 3: -->
-                    <li>
-                        <h4>3. Which leadership style is best described by the following statement: "My way, or the highway!"</h4>
-                        <h6>Select one:</h6>
-                        <ul>
-                            <li>
-                                <input type="radio" id="q3-1" name="q3" value="q3">
-                                <label for="q3-1">Free-Rein</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="q3-2" name="q3" value="q3">
-                                <label for="q3-2">Democratic</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="q3-3" name="q3" value="q3">
-                                <label for="q3-3">Autocratic</label>
-                            </li>
-                        </ul>
-                        <div class="answer">
-                                <!-- Feedback on answer choice goes here. -->
-                        </div>
-                    </li>
-                    <!-- Question 4: -->
-                    <li>
-                        <h4>4. A leader who says, "Do what you think is best", might best be described as using which style of leadership?</h4>
-                        <h6>Select one:</h6>
-                        <ul>
-                            <li>
-                                <input type="radio" id="q4-1" name="q4" value="q4">
-                                <label for="q4-1">Autocratic</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="q4-2" name="q4" value="q4">
-                                <label for="q3-2">Free-Rein</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="q4-3" name="q4" value="q4">
-                                <label for="q3-3">Democratic</label>
-                            </li>
-                        </ul>
-                        <div class="answer">
-                                <!-- Feedback on answer choice goes here. -->
-                        </div>
-                    </li>
-                    <!-- Question 5: -->
-                    <li>
-                        <h4>5. Which of the following are examples of leaders?</h4>
-                        <h6>Choose all that apply:</h6>
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="q2-1" value="1">
-                                <label for="q2-1">Military Officers</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="q2-2" value="2">
-                                <label for="q2-2">Jedi Knights</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="q2-3" value="3">
-                                <label for="q2-3">Civil Servants</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="q2-4" value="4">
-                                <label for="q2-4">Padawans</label>
-                            </li>
-                            <div class="answer">
-                                <!-- Feedback on answer choice goes here. -->
-                            </div>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="buttons">
-                    <button>submit & check your answers</button>
+            <div class="wrapper">
+                <!-- Question & Options: -->
+                <div class="questions" id="questions">
+                    <!-- Questions will be displayed dynamically here -->
+                    <!-- Answer Responses -->
                 </div>
-            </form>
+                <div class="responses" id="responses">
+                    <h6>Responses will go here</h6>
+                    <!-- Responses will be displayed dynamically here once the submit button is pressed -->
+                </div>
+
+
+                <!-- Submit Button -->
+                <div class="buttons" id="submit">
+                    <button>Submit & Check Your Answers</button>
+                </div>
+
+                <!-- Show the answers and overall results: -->
+                <div class="results" id="results">
+                    <!-- Results will be displayed dynamically here -->
+                </div>
+
+            </div>
             <div class="toTop">
                 <p><a href="#home">Back to Top<i class="fa-solid fa-arrow-turn-up"></i></a></p>
             </div>
@@ -398,5 +289,8 @@
             <p>Built by <a href="https://www.kimberleycodes.com/">Kimberley Schubert</a> for <a href="https://www.d2l.com/">D2L</a></p>
         </div>
     </footer>
+
+    <script src="./script.js"></script>
+
 </body>
 </html>

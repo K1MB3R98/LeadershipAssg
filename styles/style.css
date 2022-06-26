@@ -271,7 +271,6 @@ h5 {
 
 h6,
 p,
-label,
 ol,
 table,
 textarea {
@@ -491,6 +490,12 @@ section h6 {
   padding: 25px;
 }
 
+.quiz {
+  font-family: "Poppins", sans-serif;
+  color: #3D3D56;
+  font-size: 1rem;
+  line-height: 1.5;
+}
 .quiz .quizImg {
   background-image: url(../assets/quizImg.jpg);
   background-repeat: no-repeat;
@@ -502,11 +507,34 @@ section h6 {
   border-bottom: 2px solid #A38D7F;
 }
 .quiz .quizImg h2 {
-  margin-top: 250px;
+  margin-top: 235px;
 }
-.quiz .quizInstr p {
-  margin-top: 25px;
-  text-indent: 25px;
+.quiz .questions {
+  border: 2px solid yellow;
+}
+.quiz .answerOptions {
+  border: 2px solid green;
+}
+.quiz .answerOptions label {
+  border: 2px solid purple;
+}
+.quiz .responses {
+  border: 3px dotted blue;
+}
+.quiz .results {
+  margin: 50px 0;
+  height: 6rem;
+}
+.quiz .results div {
+  padding: 15px 0;
+  text-align: center;
+  color: #648282;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.81)), color-stop(rgba(255, 255, 255, 0.74)), to(transparent));
+  background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.74), transparent);
+  border-radius: 3px;
+}
+.quiz .results h5 {
+  text-shadow: 1px 1px 0px #3D3D56;
 }
 
 form {
