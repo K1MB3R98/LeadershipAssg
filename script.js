@@ -30,7 +30,7 @@ async function handleSubmit(event) {
 }
 consolidationForm.addEventListener("submit", handleSubmit);
 
-// JS fo reflection form submissions
+// JS for reflection form submissions
 async function handleSubmit2(event) {
     event.preventDefault();
     var status = document.getElementById("reflectionFormStatus");
@@ -159,7 +159,7 @@ function showResults() {
     jumpToResults = document.querySelector(".results");
     jumpToResults.scrollIntoView({behaviour: "smooth"});
 
-    // display # of correct answers + message
+    // display # of correct answers + results message
     if (numCorrect >= 4) {
         return resultsContainer.innerHTML = 
         `<div>
@@ -270,5 +270,5 @@ const quizQuestions = [
 // Call function to start quiz
 createQuiz();
 
-// Event Listener: When "submit" button pressed --> show responses and total correct
+// Event Listener: When "submit" button pressed --> evaluate user answer choices, show response messages, and show total correct
 submitButton.addEventListener('click', showResults);
