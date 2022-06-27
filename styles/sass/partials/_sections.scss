@@ -50,7 +50,19 @@ section {
         }
         .videoContainer {
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            // for 16:9 aspect ratio:
+            padding-top: 56.25%;
             iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
                 border: 5px solid $tertiary;
                 border-radius: 5px;
             }        
@@ -81,6 +93,7 @@ section {
         background-position: top;
         width: 100%;
         height: 350px;
+        min-height: 350px;
         border-top: 2px solid $tertiary;
         border-bottom: 2px solid $tertiary;  
         h2 {
@@ -142,7 +155,6 @@ section {
     .results {
         // border: 2px solid blue;
         margin: 50px 0;
-        height: 6rem;
         div {
             padding: 15px 0;
             text-align: center;

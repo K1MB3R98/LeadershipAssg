@@ -28,10 +28,11 @@ textarea {
         tbody {
             th {
                 padding: 5px;
-                width: 175px;
             }
             td {
                 background-color: $white;
+                min-width: 150px;
+                width: calc(100% / 3);
             }
         }
     }
@@ -50,8 +51,7 @@ textarea {
     }
     textarea {
         margin-top: 25px;
-        max-width: 95%;
-        width: 95%;
+        width: 90%;
         height: 225px;
     }
 }

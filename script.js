@@ -123,8 +123,11 @@ function showResults() {
             // increase # correct score
             numCorrect++;
 
-            // color correct answer chosen mnessage
+            // color correct answer chosen message
             responseContainers[questionNumber].style.color = 'darkgreen';
+
+            // add decorative background
+            responseContainers[questionNumber].style.backgroundColor = 'white';
 
             // display 'correct' response message
             responseContainers[questionNumber].innerHTML = `<h5>You are correct!</h5><p>${currentQuestion.responses[userAnswer]}</p>`;
@@ -137,14 +140,15 @@ function showResults() {
             // add decorative background
             responseContainers[questionNumber].style.backgroundColor = 'white';
 
-
-
             // display 'missing' response message
             responseContainers[questionNumber].innerHTML = `<h5>Whoops!</h5><p> You forgot to choose an answer!</p>`;
         } else {
             // if incorrect answer is chosen:
             // colour 'incorrect' response message
             responseContainers[questionNumber].style.color = 'maroon';
+
+            // add decorative background
+            responseContainers[questionNumber].style.backgroundColor = 'white';
 
             // display 'incorrect' response message
             responseContainers[questionNumber].innerHTML = `<h5>Sorry, that is incorrect.</h5><p>${currentQuestion.responses[userAnswer]}</p>`;

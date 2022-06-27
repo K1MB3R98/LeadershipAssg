@@ -363,6 +363,7 @@ nav .subNavFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 10px;
 }
 nav .subNavFlex p {
   margin: 0 10px;
@@ -458,8 +459,19 @@ section h6 {
 }
 .leaderStyles .leadershipVideo .videoContainer {
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
 }
 .leaderStyles .leadershipVideo .videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   border: 5px solid #A38D7F;
   border-radius: 5px;
 }
@@ -482,6 +494,7 @@ section h6 {
   background-position: top;
   width: 100%;
   height: 350px;
+  min-height: 350px;
   border-top: 2px solid #A38D7F;
   border-bottom: 2px solid #A38D7F;
 }
@@ -540,7 +553,6 @@ section h6 {
 }
 .quiz .results {
   margin: 50px 0;
-  height: 6rem;
 }
 .quiz .results div {
   padding: 15px 0;
@@ -581,10 +593,11 @@ textarea {
 }
 .consForm table tbody th {
   padding: 5px;
-  width: 175px;
 }
 .consForm table tbody td {
   background-color: white;
+  min-width: 150px;
+  width: 33.3333333333%;
 }
 .consForm textarea {
   border: none;
@@ -599,8 +612,7 @@ textarea {
 }
 .reflectForm textarea {
   margin-top: 25px;
-  max-width: 95%;
-  width: 95%;
+  width: 90%;
   height: 225px;
 }
 
@@ -613,13 +625,68 @@ footer .footerNav i {
 }
 footer .footerInfo {
   background-color: #3D3D56;
-  height: 3.5rem;
   text-align: center;
 }
 footer .footerInfo p {
-  padding-top: 1rem;
+  padding: 1rem 10px;
   color: #A38D7F;
 }
 footer .footerInfo a {
   color: white;
+}
+
+@media (max-width: 553px) {
+  .yourStyle .yourStyleImg h2 {
+    margin-right: 0;
+    width: 90%;
+    background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.81)), to(rgba(255, 255, 255, 0.74)));
+    background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.74));
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .leaderStyles .leaderStylesImg h2 {
+    margin-right: 0;
+    width: 90%;
+    background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(rgba(255, 255, 255, 0.81)), to(rgba(255, 255, 255, 0.74)));
+    background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.74));
+  }
+
+  .quiz .responses p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 493px) {
+  .yourStyle .yourStyleImg h2 {
+    margin: 200px 0 0 50px;
+  }
+}
+@media (max-width: 398px) {
+  .leaderStyles .leaderStylesImg h2 {
+    margin: 200px 0 0 50px;
+  }
+}
+@media (max-width: 379px) {
+  .yourStyle .yourStyleImg h2 {
+    margin: 155px 0 0 50px;
+  }
+}
+@media (max-width: 365px) {
+  .consolidation h2 {
+    font-size: 1.7rem;
+  }
+
+  .quiz .quizImg h2 {
+    font-size: 1.7rem;
+  }
+  .quiz .responses h5 {
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .quiz .responses p {
+    padding-left: 10px;
+  }
 }

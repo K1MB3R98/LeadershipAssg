@@ -1,0 +1,105 @@
+// Devices with screens 1550px and smaller
+@media (max-width: 1550px) {
+
+}
+
+// Devices with screens 700px and smaller
+@media (max-width: 700px) {
+
+
+}
+
+// Devices with screens 553px and smaller
+@media (max-width: 553px) {
+    .yourStyle {
+        .yourStyleImg {
+            h2 {
+                margin-right: 0;
+                width: 90%;
+                background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.74));
+            }
+        }
+    }
+}
+
+// Devices with screens 500px and smaller
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .leaderStyles {
+        .leaderStylesImg {
+            h2 {
+                margin-right: 0;
+                width: 90%;
+                background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.81), rgba(255, 255, 255, 0.74));            
+            }
+        }
+    }
+    .quiz {
+        .responses {
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+// Devices with screens 493px and smaller
+@media (max-width: 493px) {
+    .yourStyle {
+        .yourStyleImg {
+            h2 {
+                margin: 200px 0 0 50px;
+            }
+        }
+    }
+}
+
+// Devices with screens 398px and smaller
+@media (max-width: 398px) {
+    .leaderStyles {
+        .leaderStylesImg {
+            h2 {
+                margin: 200px 0 0 50px;
+            }
+        }
+    }
+
+}
+
+// Devices with screens 379px and smaller
+@media (max-width: 379px) {
+    .yourStyle {
+        .yourStyleImg {
+            h2 {
+                margin: 155px 0 0 50px;
+            }
+        }
+    }
+}
+
+// Devices with screens 365px and smaller
+@media (max-width: 365px) {
+    .consolidation {
+        h2 {
+            font-size: 1.7rem;
+        }
+    }
+    .quiz {
+        .quizImg {
+            h2 {
+            font-size: 1.7rem;
+            }
+        }
+        .responses {
+            h5 {
+                font-size: 1.8rem;
+                padding-left: 10px;
+            }
+            p {
+                padding-left: 10px;
+            }
+        }   
+    }
+}
