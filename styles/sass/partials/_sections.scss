@@ -87,11 +87,10 @@ section {
 
 // Section Styles: Quiz
 .quiz {
-    // border: 2px solid yellow;
-        font-family: $bodyFont;
-        color: $secondary;
-        font-size: 1rem;
-        line-height: 1.5;
+    font-family: $bodyFont;
+    color: $secondary;
+    font-size: 1rem;
+    line-height: 1.5;
     .quizImg {
         background-image: url(../assets/quizImg.jpg);
         background-repeat: no-repeat;
@@ -105,18 +104,21 @@ section {
             margin-top: 235px;
         }
     }
-    .questions {
-        border: 2px solid yellow;
-    }
-    .answerOptions {
-        border: 2px solid green;
-        // individual options v
-        label {
-            border: 2px solid purple;
-        }
-    }
+    .questionContainer {
+        border: 2px solid $tertiary;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        margin-top: 75px;
+        padding: 25px 50px 0 50px;
+    }   
     .responses {
-        border: 3px dotted blue;
+        width: 100%;
+        margin: 10px 25px 75px 0;
+        p {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: $black;
+        }
     }
     .results {
         // border: 2px solid blue;

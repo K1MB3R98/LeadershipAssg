@@ -25,7 +25,8 @@ function createQuiz() {
             </div>
             <div class="answerOptions"> 
                 ${answerOptions.join('')} 
-            </div>`
+            </div>
+            <div class="responses" id="responses"></div>`
         );
     });
 
@@ -38,46 +39,72 @@ function createQuiz() {
 function showResults() {
     // target the necessary HTML containers
     const answerContainers = quizContainer.querySelectorAll('.answerOptions');
+    const responseContainers = quizContainer.querySelectorAll('.responses');
+
     // # of user's correct answers
     let numCorrect = 0;
 
-    // loop through each question and check if user's answeer is correct or not
+    // loop through each question and check if user's answer is correct or not
     quizQuestions.forEach((currentQuestion, questionNumber) =>{
         // get current question
         const answerContainer = answerContainers[questionNumber];
+      
+        // check for which option was chosen
         const selector = `input[name=question${questionNumber}]:checked`;
-        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-        // error check in case of skipped question ^
 
-        // if answer choice = correct
-        if(userAnswer === currentQuestion.correctAnswer){
+        // error check in case of skipped question
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+ 
+        // Evaluate user answer choices:
+        if (userAnswer === currentQuestion.correctAnswer){
             // increase # correct score
             numCorrect++;
-            // color the answers green
-            answerContainers[questionNumber].style.color = 'lightgreen';
-            console.log("correctAnswer: ", currentQuestion.correctAnswer);
-            console.log("user answer: ", userAnswer);
 
+            // color correct answer chosen mnessage
+            responseContainers[questionNumber].style.color = 'darkgreen';
+
+            // display 'correct' response message
+            responseContainers[questionNumber].innerHTML = `<h5>You are correct!</h5><p>${currentQuestion.responses[userAnswer]}</p>`;
+
+        } else if (userAnswer === undefined) {
+            // if missing user answer input:
+            // colour missing answer message
+            responseContainers[questionNumber].style.color = 'cadetblue';
+
+            // display 'missing' response message
+            responseContainers[questionNumber].innerHTML = `<h5>Whoops!</h5><p> You forgot to choose an answer!</p>`;
         } else {
-            // if incorrect answer or missing input
-            answerContainers[questionNumber].style.color = 'red';
+            // if incorrect answer is chosen:
+            // colour 'incorrect' response message
+            responseContainers[questionNumber].style.color = 'maroon';
+            
+            // display 'incorrect' response message
+            responseContainers[questionNumber].innerHTML = `<h5>Sorry, that is incorrect.</h5><p>${currentQuestion.responses[userAnswer]}</p>`;
         }
     });
 
     // display # of correct answers + message
     if (numCorrect >= 4) {
-        return resultsContainer.innerHTML = `<div><h5>You got ${numCorrect} out of ${quizQuestions.length} correct!</h5> <h6>You really know your leadership styles!</h6></div>`;
+        return resultsContainer.innerHTML = 
+        `<div>
+            <h5>You got ${numCorrect} out of ${quizQuestions.length} correct!</h5> <h6>You really know your leadership styles!</h6></div>`;
     } else if (numCorrect >= 2) {
-        return resultsContainer.innerHTML = `<div><h5>You got ${numCorrect} out of ${quizQuestions.length} correct.</h5> <p>Not bad!</p></div>`;
+        return resultsContainer.innerHTML = 
+        `<div>
+            <h5>You got ${numCorrect} out of ${quizQuestions.length} correct.</h5>
+            <p>Not bad!</p>
+        </div>`;
     } else {
-        return resultsContainer.innerHTML = `<div><h5>You got ${numCorrect} out of ${quizQuestions.length} correct.</h5> <p>Please review the module materials and try the quiz again.</p></div>`,
-        responseContainer.innerHTML = `<p>test of response return</p>`;
+        return resultsContainer.innerHTML = 
+        `<div>
+            <h5>You got ${numCorrect} out of ${quizQuestions.length} correct.</h5>
+            <p>Please review the module materials and try the quiz again.</p>
+        </div>`;
     }
 };
 
 const quizContainer = document.getElementById('questions');
 const resultsContainer = document.getElementById('results');
-const responseContainer = document.getElementById('responses');
 const submitButton = document.getElementById('submit');
 const quizQuestions = [
     // Question 1:
@@ -90,9 +117,9 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         responses: {
-            a: 'Correct! Although some consider it a "craft" because it is part art, part science.',
-            b: "Not quite. This more accurately describes a leader rather than leadership.",
-            c: "Funny, but no."
+            a: 'Although some consider it a "craft" because it is part art, part science.',
+            b: "You're close, but this more accurately describes a leader rather than leadership.",
+            c: "Funny, but no. 😉"
         }
     },
 
@@ -107,9 +134,9 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         responses: {
-            a: "True, but there is a more correct answer.",
-            b: "True, but there is a more correct answer.",
-            c: "Correct! Leadership style is influenced by a person's beliefs, personality, experiences, environment, and their current situation.",
+            a: "There is a more correct answer.",
+            b: "There is a more correct answer.",
+            c: "Leadership style is influenced by a person's beliefs, personality, experiences, environment, and their current situation.",
             d: "While some do not discount the influence of celestial forces in our lives, there is a more correct answer."
         }
     },
@@ -124,9 +151,9 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         responses: {
-            a: "Incorrect. A free-rein leader would never demand this.",
-            b: "Incorrect. A democratic leader would ask for input from their team.",
-            c: "Correct! Autocratic leaders often make choices for thier teams with little to no input from their followers."
+            a: "A free-rein leader would never make this sort of demand.",
+            b: "A democratic leader would ask for input from their team.",
+            c: "Autocratic leaders often make choices for thier teams with little to no input from their followers."
         }
     },
 
@@ -140,9 +167,9 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         responses: {
-            a: "Incorrect. An autocratic leader would not let their followers choose for themselves.",
-            b: "Correct! Giving followers free choice on the methods to accomplish a task is typical of the free-rein leadership style.",
-            c: "Incorrect. Democratic leaders would give direction, but entertain suggestions for alternative methods."
+            a: "An autocratic leader would not let their followers choose for themselves.",
+            b: "Giving followers free choice on the methods to accomplish a task is typical of the free-rein leadership style.",
+            c: "Democratic leaders would give direction, but entertain suggestions for alternative methods."
         }
     },
 
@@ -157,15 +184,15 @@ const quizQuestions = [
         },
         correctAnswer: "d", 
         responses: {
-            a: "Incorrect. If there is gold on the shoulder, they are a leader.",
-            b: "Incorrect. Although they answer to the Jedi council, a Jedi Knight also has prodigies that they must lead and mentor in the ways of The Force.",
-            c: "Incorrect. Contrary to what the name suggests, these people are considered to be leaders of the public.",
-            d: "Correct! Star Wars fans will know that this the name given to young apprentices of the Jedi Knights. Padawans are followers and leaders-in-training."
+            a: "If there is gold on the shoulder, they are a leader.",
+            b: "Although they answer to the Jedi council, a Jedi Knight also has prodigies that they must lead and mentor in the ways of The Force.",
+            c: "Contrary to what the name suggests, these people are considered to be leaders of the public.",
+            d: "Star Wars fans will know that this the name given to young apprentices of the Jedi Knights. Padawans are followers and leaders-in-training."
         }
     }
 ];
 // Call function to start quiz
 createQuiz();
 
-// Event Listener: When "submit" button pressed --> show answers and total correct
+// Event Listener: When "submit" button pressed --> show responses and total correct
 submitButton.addEventListener('click', showResults);

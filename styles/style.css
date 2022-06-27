@@ -267,6 +267,7 @@ h4 {
 h5 {
   font-family: "Dancing Script", cursive;
   font-size: 2rem;
+  text-shadow: 2px 2px 0 white;
 }
 
 h6,
@@ -509,17 +510,21 @@ section h6 {
 .quiz .quizImg h2 {
   margin-top: 235px;
 }
-.quiz .questions {
-  border: 2px solid yellow;
-}
-.quiz .answerOptions {
-  border: 2px solid green;
-}
-.quiz .answerOptions label {
-  border: 2px solid purple;
+.quiz .questionContainer {
+  border: 2px solid #A38D7F;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  margin-top: 75px;
+  padding: 25px 50px 0 50px;
 }
 .quiz .responses {
-  border: 3px dotted blue;
+  width: 100%;
+  margin: 10px 25px 75px 0;
+}
+.quiz .responses p {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: black;
 }
 .quiz .results {
   margin: 50px 0;
