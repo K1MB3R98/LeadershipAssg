@@ -82,6 +82,11 @@ function showResults() {
             responseContainers[questionNumber].innerHTML = `<h5>Sorry, that is incorrect.</h5><p>${currentQuestion.responses[userAnswer]}</p>`;
         }
     });
+    
+    // Autoscroll to overall score and results message
+    jumpToResults = document.querySelector(".results");
+    jumpToResults.scrollIntoView({behaviour: "smooth"});
+
 
     // display # of correct answers + message
     if (numCorrect >= 4) {
