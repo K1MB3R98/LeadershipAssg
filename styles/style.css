@@ -323,7 +323,7 @@ i {
 }
 
 .buttons {
-  margin: 25px;
+  margin-top: 25px;
   text-align: center;
 }
 
@@ -344,12 +344,6 @@ button:hover, button:focus {
   background-color: white;
   border: 2px solid #A38D7F;
   color: #648282;
-}
-
-form {
-  border: 2px solid #A38D7F;
-  border-radius: 5px;
-  background: whitesmoke;
 }
 
 .toTop {
@@ -455,6 +449,20 @@ section h6 {
 .leaderStyles .leaderStylesIntro p {
   margin-top: 10px;
 }
+.leaderStyles .leadershipVideo {
+  margin: 75px 0 50px 0;
+}
+.leaderStyles .leadershipVideo p {
+  margin-bottom: 50px;
+  text-align: left;
+}
+.leaderStyles .leadershipVideo .videoContainer {
+  text-align: center;
+}
+.leaderStyles .leadershipVideo .videoContainer iframe {
+  border: 5px solid #A38D7F;
+  border-radius: 5px;
+}
 
 .consolidation p {
   margin-bottom: 40px;
@@ -521,10 +529,14 @@ section h6 {
   width: 100%;
   margin: 10px 25px 75px 0;
 }
+.quiz .responses h5 {
+  padding-left: 25px;
+}
 .quiz .responses p {
   font-style: italic;
   font-size: 1.2rem;
   color: black;
+  padding: 0 25px 10px 25px;
 }
 .quiz .results {
   margin: 50px 0;
@@ -544,6 +556,14 @@ section h6 {
 
 form {
   margin-top: 50px;
+  border: 2px solid #A38D7F;
+  border-radius: 5px;
+  background: whitesmoke;
+}
+
+.formStatus {
+  margin-top: 25px;
+  color: cadetblue;
 }
 
 textarea {
@@ -582,21 +602,6 @@ textarea {
   max-width: 95%;
   width: 95%;
   height: 225px;
-}
-
-.quizForm {
-  margin-top: 50px;
-  padding: 50px 25px 25px 25px;
-}
-.quizForm h6,
-.quizForm li {
-  padding: 0 25px;
-}
-.quizForm .answer {
-  margin: 15px 25px 75px 25px;
-}
-.quizForm .buttons {
-  margin-top: 75px;
 }
 
 footer .footerNav {

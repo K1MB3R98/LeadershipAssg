@@ -17,11 +17,9 @@
             <nav>
                 <ul class="navFlex">
                     <li class="subNavFlex">
-                        <!-- TODO: ^ displays 'previous' topic -->
                         <p><a href=""><i class="fa-solid fa-arrow-left"></i>Previous module</a></p>
                     </li>
                     <li class="subNavFlex">
-                        <!-- TODO: ^ won't let you skip ahead until >80% achieved in knowledge check quiz -> error, else display next topic -->
                         <p><a href="">Next module<i class="fa-solid fa-arrow-right"></i></a></p>
                     </li>
                 </ul>
@@ -107,6 +105,18 @@
                     <h4>Free-Rein</h4>
                     <p>Free-rein leadership, also called Laissez-Faire, is a type of leadership style in which leaders are hands-off and allow group members to make the decisions. Mangers set objectives and employees are free to do whatever is appropriate to accomplish those objectives.</p>
                 </article> 
+
+                <div class="leadershipVideo">
+                    <h3>Watch: "Leadership Styles: Autocratic Democratic Laissez-Faire"</h3>
+                    <p>This video, created by communication coach Dr. Alex Lyon, further explains the autocratic, democratic, and free-rein (a.k.a. laissez-faire) styles of leadership.</p>
+                    <div class="videoContainer">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1AZMiq6Mg-k" title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
                 <div class="toTop">
                     <p><a href="#home">Back to Top<i class="fa-solid fa-arrow-turn-up"></i></a></p>
                 </div>  
@@ -117,8 +127,8 @@
         <!-- Begin: Consolidation -->
         <section class="consolidation wrapper" id="consolidation">
             <h2>Consolidation: Making It Stick</h2>
-            <p>Fill in the table below to summarize your  understanding of concepts studied in this module.</p>
-            <form class="consForm" action="">
+            <p>Fill in the table below to summarize your  understanding of concepts studied in this module by clicking into a box and typing your response. When you are done, press the button below to submit your responses.</p>
+            <form class="consForm" id="consolidationForm" action="https://formspree.io/f/xrgjkjed" method="POST">
                 <table>
                     <thead>
                         <tr>
@@ -132,52 +142,53 @@
                         <tr>
                             <th>Positives of this leadership style:</th>
                             <td>
-                                <textarea name="posAutocratic" id="posAutocratic"  placeholder=" •"></textarea>
+                                <textarea name="Positives for Autocratic style" id="posAutocratic"  placeholder=" •"></textarea>
                                 <label for="Positives for Autocratic style" class="sr-only"></label>
                             </td>
                             <td>
-                                <textarea name="posDemodratic" id="posDemocratic" placeholder=" •"></textarea>
+                                <textarea name="Positives for Democratic style" id="posDemocratic" placeholder=" •"></textarea>
                                 <label for="Positives for Democratic style" class="sr-only"></label>
                             </td>
                             <td>
-                                <textarea name="posFree-Rein" id="posFree-Rein" placeholder=" •"></textarea>
+                                <textarea name="Positives for Free-Rein style" id="posFree-Rein" placeholder=" •"></textarea>
                                 <label for="Positives for Free-Rein style" class="sr-only"></label>
                             </td>
                         </tr>
                         <tr>
                             <th>Negatives of this leadership style:</th>
                             <td>
-                                <textarea name="negAutocratic" id="negAutocratic" placeholder=" •"></textarea>
+                                <textarea name="Negatives for Autocratic style" id="negAutocratic" placeholder=" •"></textarea>
                                 <label for="Negatives for Autocratic style" class="sr-only"></label>
                             </td>
                             <td>
-                                <textarea name="negDemocratic" id="negDemocratic" placeholder=" •"></textarea>
+                                <textarea name="Negatives for Democratic style" id="negDemocratic" placeholder=" •"></textarea>
                                 <label for="Negatives for Democratic style" class="sr-only"></label>
                             </td>
                             <td>
-                                <textarea name="negFree-Rein" id="negFree-Rein" placeholder=" •"></textarea>
+                                <textarea name="Negatives for Free-Rein style" id="negFree-Rein" placeholder=" •"></textarea>
                                 <label for="Negatives for Free-Rein style" class="sr-only"></label>
                             </td>
                         </tr>
                         <tr>
                             <th>Historical or pop-culture examples of this style:</th>
                             <td>
-                                <textarea name="exAutocratic" id="exAutocratic" placeholder=" •"></textarea>
+                                <textarea name="Examples for Autocratic style" id="exAutocratic" placeholder=" •"></textarea>
                                 <label for="Examples for Autocratic style" class="sr-only"></label>
                             </td>
                             <td>
-                                <textarea name="exDemocratic" id="exDemocratic" placeholder=" •"></textarea>
+                                <textarea name="Examples for Democratic style" id="exDemocratic" placeholder=" •"></textarea>
                                 <label for="Examples for Democratic style" class="sr-only"></label>
                             </td>
                             <td>
-                                <textarea name="exFree-Rein" id="exFree-Rein" placeholder=" •"></textarea>
+                                <textarea name="Examples for Free-Rein style" id="exFree-Rein" placeholder=" •"></textarea>
                                 <label for="Examples for Free-Rein style" class="sr-only"></label>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="buttons">
-                    <button>submit</button>
+                    <button id="consolidationFormButton" type="submit">Submit</button>
+                    <p class="formStatus" id="consolidationFormStatus"></p>
                 </div>
             </form>
             <div class="toTop">
@@ -201,33 +212,34 @@
         <!-- Begin: Reflection -->
         <section class="reflection wrapper" id="reflection">
             <h2>Reflection</h2>
-            <p>Complete these reflection questions and press "Submit" when you're done.</p>
-            <form class="reflectForm" action="">
+            <p>Complete these reflection questions by clicking into a box and typing your answers. When you are done, press the button below to submit your responses.</p>
+            <form class="reflectForm" id="reflectionForm" action="https://formspree.io/f/xrgjkjed" method="POST">
                 <ol>
                     <li>
                         <label for="Reflection 1">
                             What do you consider to be your natural leadership style, and why?
                         </label>
                         <br>
-                        <textarea name="refl1" id="refl1"></textarea>
+                        <textarea name="Reflection 1: Your natural leadership style" id="refl1"></textarea>
                     </li>
                     <li>
                         <label for="Reflection 2">
                             Do you predominantly use that leadership style, or are there situations where you switch and make use of another style?
                         </label>
                         <br>
-                        <textarea name="refl2" id="refl2"></textarea>
+                        <textarea name="Reflection 2: Usual style or situational?" id="refl2"></textarea>
                     </li>
                     <li>
                         <label for="Reflection 3">
                             What are the benefits and drawbacks that you have observed with this approach?
                         </label>
                         <br>
-                        <textarea name="refl3" id="refl3"></textarea>
+                        <textarea name="Reflection 3: Benefits of your approach" id="refl3"></textarea>
                     </li>
                 </ol>
                 <div class="buttons">
-                    <button>submit</button>
+                    <button id="reflectionFormButton" type="submit">Submit</button>
+                    <p class="formStatus" id="reflectionFormStatus"></p>
                 </div>
             </form>
             <div class="toTop">
@@ -273,11 +285,9 @@
         <nav class="footerNav">
             <ul class="navFlex">
                 <li class="subNavFlex">
-                    <!-- TODO: ^ displays 'previous' topic -->
                     <p><a href=""><i class="fa-solid fa-arrow-left"></i>Previous module</a></p>
                 </li>
                 <li class="subNavFlex">
-                    <!-- TODO: ^ won't let you skip ahead until >80% achieved in knowledge check quiz -> error, else display next topic -->
                     <p><a href="">Next module<i class="fa-solid fa-arrow-right"></i></a></p>
                 </li>
             </ul>

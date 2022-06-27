@@ -1,7 +1,14 @@
 // Forms Styles
 form {
-    // border: 2px solid red;
     margin-top: 50px;
+    border: 2px solid $tertiary;
+    border-radius: 5px;
+    background: whitesmoke;
+}
+
+.formStatus {
+    margin-top: 25px;
+    color: cadetblue;
 }
 
 textarea {
@@ -46,27 +53,5 @@ textarea {
         max-width: 95%;
         width: 95%;
         height: 225px;
-    }
-}
-
-// Quiz Form
-.quizForm {
-    // border: 2px solid red;
-    margin-top: 50px;
-    padding: 50px 25px 25px 25px;
-
-    h6,
-    li {
-        padding: 0 25px;
-    }
-
-    .answer {
-        // border: 2px solid pink;
-        margin: 15px 25px 75px 25px;
-    }
-
-    .buttons {
-        // border: 2px solid blue;
-        margin-top: 75px;
     }
 }

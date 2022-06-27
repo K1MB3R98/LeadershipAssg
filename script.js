@@ -1,3 +1,66 @@
+// JS for consolidation form submissions
+const consolidationForm = document.getElementById("consolidationForm");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("consolidationFormStatus");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: consolidationForm.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Thanks for your submission!";
+            consolidationForm.reset()
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form."
+                }
+            })
+        }
+    }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form."
+    });
+}
+consolidationForm.addEventListener("submit", handleSubmit);
+
+// JS fo reflection form submissions
+async function handleSubmit2(event) {
+    event.preventDefault();
+    var status = document.getElementById("reflectionFormStatus");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: reflectionForm.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Thanks for your submission!";
+            reflectionForm.reset()
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form."
+                }
+            })
+        }
+    }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form."
+    });
+}
+reflectionForm.addEventListener("submit", handleSubmit2);
+
+// JS for Module Quiz
 // Build the quiz and display each question with it's possible answers
 function createQuiz() {
     // store HTML to display in variable = empty array
@@ -71,13 +134,18 @@ function showResults() {
             // colour missing answer message
             responseContainers[questionNumber].style.color = 'cadetblue';
 
+            // add decorative background
+            responseContainers[questionNumber].style.backgroundColor = 'white';
+
+
+
             // display 'missing' response message
             responseContainers[questionNumber].innerHTML = `<h5>Whoops!</h5><p> You forgot to choose an answer!</p>`;
         } else {
             // if incorrect answer is chosen:
             // colour 'incorrect' response message
             responseContainers[questionNumber].style.color = 'maroon';
-            
+
             // display 'incorrect' response message
             responseContainers[questionNumber].innerHTML = `<h5>Sorry, that is incorrect.</h5><p>${currentQuestion.responses[userAnswer]}</p>`;
         }
@@ -86,7 +154,6 @@ function showResults() {
     // Autoscroll to overall score and results message
     jumpToResults = document.querySelector(".results");
     jumpToResults.scrollIntoView({behaviour: "smooth"});
-
 
     // display # of correct answers + message
     if (numCorrect >= 4) {

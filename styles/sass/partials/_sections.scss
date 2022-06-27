@@ -41,6 +41,21 @@ section {
             margin-top: 10px;
         }
     }
+
+    .leadershipVideo {
+        margin: 75px 0 50px 0;
+        p {
+            margin-bottom: 50px;
+            text-align: left;
+        }
+        .videoContainer {
+            text-align: center;
+            iframe {
+                border: 5px solid $tertiary;
+                border-radius: 5px;
+            }        
+        }
+    }
 }
 
 // Section Styles: Consolidation
@@ -114,10 +129,14 @@ section {
     .responses {
         width: 100%;
         margin: 10px 25px 75px 0;
+        h5 {
+            padding-left: 25px;
+        }
         p {
             font-style: italic;
             font-size: 1.2rem;
             color: $black;
+            padding: 0 25px 10px 25px;
         }
     }
     .results {
